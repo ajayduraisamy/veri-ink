@@ -1,0 +1,913 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="veri-about-container">
+    <!-- Hero Section -->
+    <section class="veri-about-hero">
+        <div class="veri-hero-content">
+            <div class="veri-hero-badge">
+                <span>About Us</span>
+            </div>
+            <h1 class="veri-hero-title">
+                Redefining Signature Verification with 
+                <span class="veri-gradient-text">Artificial Intelligence</span>
+            </h1>
+            <p class="veri-hero-description">
+                Veri-Ink combines cutting-edge AI technologies to provide the most accurate 
+                signature verification system available today. Our mission is to eliminate 
+                signature fraud through intelligent analysis.
+            </p>
+            <div class="veri-hero-stats">
+                <div class="veri-stat-item">
+                    <div class="veri-stat-number">99.7%</div>
+                    <div class="veri-stat-label">Accuracy Rate</div>
+                </div>
+                <div class="veri-stat-divider"></div>
+                <div class="veri-stat-item">
+                    <div class="veri-stat-number">0.3s</div>
+                    <div class="veri-stat-label">Average Verification Time</div>
+                </div>
+                <div class="veri-stat-divider"></div>
+                <div class="veri-stat-item">
+                    <div class="veri-stat-number">50K+</div>
+                    <div class="veri-stat-label">Signatures Analyzed</div>
+                </div>
+            </div>
+        </div>
+        <div class="veri-hero-visual">
+            <div class="veri-signature-animation">
+                <div class="veri-signature-canvas">
+                    <svg viewBox="0 0 400 150" class="veri-signature-svg">
+                        <path class="veri-signature-path" d="M50,75 Q100,30 150,75 T250,75 T350,75" 
+                              fill="none" stroke="url(#gradient)" stroke-width="3"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#6366f1"/>
+                                <stop offset="100%" stop-color="#06b6d4"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="veri-verification-result">
+                    <div class="veri-result-badge veri-genuine">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Verified Genuine</span>
+                    </div>
+                    <div class="veri-result-badge veri-forged">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Detected as Forged</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="veri-mission-section">
+        <div class="veri-section-header">
+            <h2>Our Mission & Vision</h2>
+            <p>Building trust through technology</p>
+        </div>
+        <div class="veri-mission-cards">
+            <div class="veri-mission-card">
+                <div class="veri-card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To provide organizations worldwide with the most reliable, efficient, and 
+                accessible signature verification system, eliminating fraud and building trust 
+                in every document transaction.</p>
+            </div>
+            <div class="veri-mission-card">
+                <div class="veri-card-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>To become the global standard for document authentication, creating a world 
+                where signature fraud is virtually eliminated through advanced AI technology 
+                and continuous innovation.</p>
+            </div>
+            <div class="veri-mission-card">
+                <div class="veri-card-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Our Values</h3>
+                <p>Integrity, innovation, and accuracy drive everything we do. We believe in 
+                transparency, continuous learning, and delivering exceptional value to our 
+                clients and partners.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="veri-tech-section">
+        <div class="veri-section-header">
+            <h2>Advanced Technology Stack</h2>
+            <p>Powered by state-of-the-art AI and machine learning</p>
+        </div>
+        <div class="veri-tech-grid">
+            <div class="veri-tech-card">
+                <div class="veri-tech-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Deep Learning</h3>
+                <p>Our convolutional neural networks analyze signature patterns with 
+                unprecedented accuracy, learning from thousands of verified samples to 
+                distinguish genuine from forged signatures.</p>
+                <ul class="veri-tech-features">
+                    <li><i class="fas fa-check"></i> CNN Architecture</li>
+                    <li><i class="fas fa-check"></i> Transfer Learning</li>
+                    <li><i class="fas fa-check"></i> Real-time Processing</li>
+                </ul>
+            </div>
+            <div class="veri-tech-card">
+                <div class="veri-tech-icon">
+                    <i class="fas fa-crop-alt"></i>
+                </div>
+                <h3>Image Processing</h3>
+                <p>Advanced computer vision techniques extract 150+ features from signatures, 
+                including pressure patterns, stroke dynamics, and spatial characteristics 
+                invisible to the human eye.</p>
+                <ul class="veri-tech-features">
+                    <li><i class="fas fa-check"></i> Feature Extraction</li>
+                    <li><i class="fas fa-check"></i> Noise Reduction</li>
+                    <li><i class="fas fa-check"></i> Pattern Recognition</li>
+                </ul>
+            </div>
+            <div class="veri-tech-card">
+                <div class="veri-tech-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>NLP Heuristics</h3>
+                <p>Natural Language Processing algorithms analyze writing style and behavioral 
+                patterns, providing an additional layer of verification that mimics human 
+                expert analysis.</p>
+                <ul class="veri-tech-features">
+                    <li><i class="fas fa-check"></i> Style Analysis</li>
+                    <li><i class="fas fa-check"></i> Behavioral Patterns</li>
+                    <li><i class="fas fa-check"></i> Context Understanding</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="veri-process-section">
+        <div class="veri-section-header">
+            <h2>How Veri-Ink Works</h2>
+            <p>A four-step process to ensure signature authenticity</p>
+        </div>
+        <div class="veri-process-timeline">
+            <div class="veri-process-step">
+                <div class="veri-step-number">01</div>
+                <div class="veri-step-content">
+                    <h3>Signature Upload</h3>
+                    <p>Users upload signature images through our secure platform. 
+                    Multiple formats supported including PNG, JPEG, and PDF.</p>
+                </div>
+                <div class="veri-step-icon">
+                    <i class="fas fa-upload"></i>
+                </div>
+            </div>
+            <div class="veri-process-step">
+                <div class="veri-step-number">02</div>
+                <div class="veri-step-content">
+                    <h3>AI Preprocessing</h3>
+                    <p>Our system enhances image quality, removes noise, and extracts 
+                    essential features for analysis.</p>
+                </div>
+                <div class="veri-step-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+            </div>
+            <div class="veri-process-step">
+                <div class="veri-step-number">03</div>
+                <div class="veri-step-content">
+                    <h3>Multi-Layer Analysis</h3>
+                    <p>Deep Learning, Image Processing, and NLP algorithms work together 
+                    to analyze hundreds of signature characteristics.</p>
+                </div>
+                <div class="veri-step-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="veri-process-step">
+                <div class="veri-step-number">04</div>
+                <div class="veri-step-content">
+                    <h3>Verification Result</h3>
+                    <p>Instant results with confidence scores and detailed analysis 
+                    reports delivered to the user.</p>
+                </div>
+                <div class="veri-step-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="veri-about-cta">
+        <div class="veri-cta-content">
+            <h2>Ready to Secure Your Signatures?</h2>
+            <p>Join thousands of organizations that trust Veri-Ink for accurate, 
+            reliable signature verification.</p>
+            <div class="veri-cta-buttons">
+                <a href="/register" class="veri-btn veri-btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Start Free Trial
+                </a>
+                <a href="/predict" class="veri-btn veri-btn-outline">
+                    <i class="fas fa-search"></i>
+                    Try Demo
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    /* About Page Styles */
+    .veri-about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .veri-about-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        padding: 80px 0;
+        min-height: 600px;
+    }
+
+    .veri-hero-content {
+        animation: fadeInUp 0.8s ease-out;
+    }
+
+    .veri-hero-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+    }
+
+    .veri-hero-title {
+        font-size: 3.2rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 24px;
+        color: #1e293b;
+    }
+
+    .veri-gradient-text {
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .veri-hero-description {
+        font-size: 1.1rem;
+        color: #64748b;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        max-width: 500px;
+    }
+
+    .veri-hero-stats {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    .veri-stat-item {
+        text-align: center;
+    }
+
+    .veri-stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+    }
+
+    .veri-stat-label {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin-top: 8px;
+        font-weight: 500;
+    }
+
+    .veri-stat-divider {
+        width: 1px;
+        height: 40px;
+        background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);
+    }
+
+    /* Hero Visual */
+    .veri-hero-visual {
+        animation: fadeInRight 0.8s ease-out;
+    }
+
+    .veri-signature-animation {
+        background: white;
+        border-radius: 24px;
+        padding: 40px;
+        box-shadow: 0 20px 60px rgba(99, 102, 241, 0.15);
+        border: 1px solid rgba(99, 102, 241, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .veri-signature-animation::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+    }
+
+    .veri-signature-canvas {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+        border-radius: 16px;
+        margin-bottom: 30px;
+    }
+
+    .veri-signature-svg {
+        width: 80%;
+        height: 80%;
+    }
+
+    .veri-signature-path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: drawSignature 3s ease-in-out forwards;
+    }
+
+    .veri-verification-result {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .veri-result-badge {
+        padding: 12px 24px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: transform 0.3s ease;
+    }
+
+    .veri-result-badge:hover {
+        transform: translateY(-3px);
+    }
+
+    .veri-genuine {
+        background: linear-gradient(135deg, #10b981, #34d399);
+        color: white;
+        box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+    }
+
+    .veri-forged {
+        background: linear-gradient(135deg, #ef4444, #f87171);
+        color: white;
+        box-shadow: 0 10px 20px rgba(239, 68, 68, 0.2);
+    }
+
+    /* Section Header */
+    .veri-section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .veri-section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #1e293b;
+    }
+
+    .veri-section-header p {
+        font-size: 1.1rem;
+        color: #64748b;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Mission Section */
+    .veri-mission-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    }
+
+    .veri-mission-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .veri-mission-card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .veri-mission-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .veri-mission-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .veri-mission-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .veri-card-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .veri-mission-card h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #1e293b;
+    }
+
+    .veri-mission-card p {
+        color: #64748b;
+        line-height: 1.7;
+    }
+
+    /* Technology Section */
+    .veri-tech-section {
+        padding: 100px 0;
+        background: white;
+    }
+
+    .veri-tech-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+    }
+
+    .veri-tech-card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .veri-tech-card:hover {
+        border-color: #6366f1;
+        box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+        transform: translateY(-5px);
+    }
+
+    .veri-tech-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .veri-tech-card h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #1e293b;
+    }
+
+    .veri-tech-card p {
+        color: #64748b;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .veri-tech-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .veri-tech-features li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+        color: #475569;
+        font-size: 0.95rem;
+    }
+
+    .veri-tech-features i {
+        color: #10b981;
+        font-size: 0.8rem;
+    }
+
+    /* Process Section */
+    .veri-process-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    }
+
+    .veri-process-timeline {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .veri-process-timeline::before {
+        content: '';
+        position: absolute;
+        left: 50px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #6366f1, #06b6d4);
+        transform: translateX(-50%);
+    }
+
+    .veri-process-step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 60px;
+        position: relative;
+    }
+
+    .veri-step-number {
+        width: 100px;
+        font-size: 3rem;
+        font-weight: 800;
+        color: #cbd5e1;
+        line-height: 1;
+        text-align: right;
+        padding-right: 30px;
+    }
+
+    .veri-step-content {
+        flex: 1;
+        padding: 0 30px;
+    }
+
+    .veri-step-content h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #1e293b;
+    }
+
+    .veri-step-content p {
+        color: #64748b;
+        line-height: 1.7;
+    }
+
+    .veri-step-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    }
+
+    /* Applications Section */
+    .veri-applications-section {
+        padding: 100px 0;
+        background: white;
+    }
+
+    .veri-applications-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .veri-application-card {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+    }
+
+    .veri-application-card:hover {
+        border-color: #6366f1;
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+    }
+
+    .veri-app-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .veri-application-card h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #1e293b;
+    }
+
+    .veri-application-card p {
+        color: #64748b;
+        line-height: 1.7;
+        font-size: 0.95rem;
+    }
+
+    /* CTA Section */
+    .veri-about-cta {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        color: white;
+        text-align: center;
+        border-radius: 30px;
+        margin: 50px 0;
+    }
+
+    .veri-cta-content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .veri-cta-content h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .veri-cta-content p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin-bottom: 40px;
+        line-height: 1.7;
+    }
+
+    .veri-cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .veri-btn {
+        padding: 16px 32px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border: 2px solid transparent;
+        cursor: pointer;
+    }
+
+    .veri-btn-primary {
+        background: white;
+        color: #6366f1;
+    }
+
+    .veri-btn-primary:hover {
+        background: #f8fafc;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .veri-btn-outline {
+        background: transparent;
+        color: white;
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .veri-btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: white;
+        transform: translateY(-3px);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes drawSignature {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .veri-about-hero {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 60px 0;
+        }
+
+        .veri-hero-title {
+            font-size: 2.5rem;
+        }
+
+        .veri-section-header h2 {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .veri-hero-stats {
+            gap: 20px;
+        }
+
+        .veri-stat-number {
+            font-size: 2rem;
+        }
+
+        .veri-stat-divider {
+            display: none;
+        }
+
+        .veri-process-timeline::before {
+            display: none;
+        }
+
+        .veri-process-step {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .veri-step-number {
+            width: auto;
+            text-align: center;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        .veri-step-content {
+            padding: 20px 0;
+        }
+
+        .veri-step-icon {
+            margin: 0 auto;
+        }
+
+        .veri-cta-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .veri-btn {
+            width: 100%;
+            max-width: 300px;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .veri-hero-title {
+            font-size: 2rem;
+        }
+
+        .veri-hero-badge {
+            font-size: 0.8rem;
+        }
+
+        .veri-tech-grid,
+        .veri-mission-cards,
+        .veri-applications-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<script>
+    // Animate signature drawing
+    document.addEventListener('DOMContentLoaded', function() {
+        const signaturePath = document.querySelector('.veri-signature-path');
+        
+        // Reset animation on page load
+        signaturePath.style.strokeDashoffset = '1000';
+        
+        setTimeout(() => {
+            signaturePath.style.animation = 'drawSignature 3s ease-in-out forwards';
+        }, 500);
+
+        // Animate stats counter
+        const statNumbers = document.querySelectorAll('.veri-stat-number');
+        statNumbers.forEach(stat => {
+            const finalValue = parseFloat(stat.textContent);
+            const suffix = stat.textContent.replace(/[0-9.]/g, '');
+            const duration = 2000;
+            const increment = finalValue / (duration / 16);
+            let currentValue = 0;
+            
+            const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= finalValue) {
+                    currentValue = finalValue;
+                    clearInterval(timer);
+                }
+                stat.textContent = suffix ? Math.round(currentValue) + suffix : Math.round(currentValue);
+            }, 16);
+        });
+
+        // Add hover effects to cards
+        const cards = document.querySelectorAll('.veri-tech-card, .veri-application-card, .veri-mission-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    });
+</script>
+{% endblock %}

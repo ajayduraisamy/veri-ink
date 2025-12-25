@@ -1,0 +1,968 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="veri-registration-page">
+    <!-- Left Column: Registration Form -->
+    <div class="veri-registration-container">
+        <div class="veri-registration-card">
+            <!-- Registration Header -->
+            <div class="veri-registration-header">
+                <div class="veri-registration-icon">
+                    <div class="veri-icon-circle">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                </div>
+                <h1 class="veri-registration-title">Create Your Account</h1>
+                <p class="veri-registration-subtitle">
+                    Join thousands of organizations securing their signatures with AI
+                </p>
+            </div>
+
+            <!-- Registration Form -->
+            <form method="post" class="veri-registration-form">
+               
+                
+                <!-- Name Field -->
+                <div class="veri-form-group">
+                    <label class="veri-form-label">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Full Name</span>
+                    </label>
+                    <div class="veri-input-container">
+                        <input 
+                            type="text" 
+                            name="name" 
+                            class="veri-form-input" 
+                            placeholder="Enter your full name"
+                            required
+                        >
+                        <div class="veri-input-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <div class="veri-form-hint">
+                        <i class="fas fa-info-circle"></i>
+                        As it appears on official documents
+                    </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="veri-form-group">
+                    <label class="veri-form-label">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email Address</span>
+                    </label>
+                    <div class="veri-input-container">
+                        <input 
+                            type="email" 
+                            name="email" 
+                            class="veri-form-input" 
+                            placeholder="you@company.com"
+                            required
+                        >
+                        <div class="veri-input-icon">
+                            <i class="fas fa-at"></i>
+                        </div>
+                    </div>
+                    <div class="veri-form-hint">
+                        <i class="fas fa-info-circle"></i>
+                        We'll send verification to this email
+                    </div>
+                </div>
+
+                <!-- Phone Field -->
+                <div class="veri-form-group">
+                    <label class="veri-form-label">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Phone Number</span>
+                    </label>
+                    <div class="veri-input-container">
+                        <input 
+                            type="tel" 
+                            name="phone" 
+                            class="veri-form-input" 
+                            placeholder="+1 (555) 123-4567"
+                            required
+                        >
+                        <div class="veri-input-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="veri-form-hint">
+                        <i class="fas fa-info-circle"></i>
+                        For important security notifications
+                    </div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="veri-form-group">
+                    <label class="veri-form-label">
+                        <i class="fas fa-lock"></i>
+                        <span>Password</span>
+                    </label>
+                    <div class="veri-input-container">
+                        <input 
+                            type="password" 
+                            name="password" 
+                            id="passwordInput"
+                            class="veri-form-input" 
+                            placeholder="Create a strong password"
+                            required
+                        >
+                        <div class="veri-input-icon veri-password-toggle">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Password Strength Meter -->
+                    <div class="veri-password-strength">
+                        <div class="veri-strength-meter">
+                            <div class="veri-strength-bar" id="strengthBar"></div>
+                        </div>
+                        <div class="veri-strength-text">
+                            <span>Password strength:</span>
+                            <span class="veri-strength-label" id="strengthLabel">Weak</span>
+                        </div>
+                    </div>
+
+                    <!-- Password Requirements -->
+                    <div class="veri-password-requirements">
+                        <h4>Password Requirements:</h4>
+                        <ul>
+                            <li class="veri-requirement" data-requirement="length">
+                                <i class="fas fa-circle"></i>
+                                At least 8 characters
+                            </li>
+                            <li class="veri-requirement" data-requirement="uppercase">
+                                <i class="fas fa-circle"></i>
+                                One uppercase letter
+                            </li>
+                            <li class="veri-requirement" data-requirement="number">
+                                <i class="fas fa-circle"></i>
+                                One number
+                            </li>
+                            <li class="veri-requirement" data-requirement="special">
+                                <i class="fas fa-circle"></i>
+                                One special character
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="veri-terms-section">
+                    <label class="veri-checkbox-container">
+                        <input type="checkbox" id="termsCheckbox" required>
+                        <span class="veri-checkbox"></span>
+                        <span class="veri-checkbox-label">
+                            I agree to the <a href="#" class="veri-terms-link">Terms of Service</a> and 
+                            <a href="#" class="veri-terms-link">Privacy Policy</a>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="veri-submit-button">
+                    <i class="fas fa-rocket"></i>
+                    <span>Create Account</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+
+              
+                <!-- Login Link -->
+                <div class="veri-login-link">
+                    Already have an account? 
+                    <a href="/login" class="veri-login-redirect">Sign In</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   
+</div>
+
+<style>
+    /* Registration Page Layout */
+    .veri-registration-page {
+        min-height: 100vh;
+        display: flex;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* Left Column - Registration Form */
+    .veri-registration-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        animation: slideInLeft 0.6s ease-out;
+    }
+
+    .veri-registration-card {
+        background: white;
+        border-radius: 24px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+        padding: 50px 40px;
+        width: 100%;
+        max-width: 500px;
+        border: 1px solid rgba(99, 102, 241, 0.1);
+    }
+
+    /* Registration Header */
+    .veri-registration-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .veri-registration-icon {
+        margin-bottom: 25px;
+    }
+
+    .veri-icon-circle {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: white;
+        font-size: 2rem;
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    }
+
+    .veri-registration-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 12px;
+        line-height: 1.2;
+    }
+
+    .veri-registration-subtitle {
+        color: #64748b;
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Form Styles */
+    .veri-registration-form {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .veri-form-group {
+        position: relative;
+    }
+
+    .veri-form-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+        color: #334155;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+    }
+
+    .veri-form-label i {
+        color: #6366f1;
+        font-size: 1.1rem;
+    }
+
+    .veri-input-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .veri-form-input {
+        width: 100%;
+        padding: 16px 20px 16px 48px;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: #f8fafc;
+        color: #1e293b;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .veri-form-input:focus {
+        outline: none;
+        border-color: #6366f1;
+        background: white;
+        box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    }
+
+    .veri-form-input::placeholder {
+        color: #94a3b8;
+    }
+
+    .veri-input-icon {
+        position: absolute;
+        left: 16px;
+        color: #94a3b8;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+    }
+
+    .veri-form-input:focus + .veri-input-icon {
+        color: #6366f1;
+    }
+
+    .veri-password-toggle {
+        left: auto;
+        right: 16px;
+        cursor: pointer;
+        color: #94a3b8;
+    }
+
+    .veri-password-toggle:hover {
+        color: #6366f1;
+    }
+
+    .veri-form-hint {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-top: 6px;
+        margin-left: 4px;
+    }
+
+    .veri-form-hint i {
+        font-size: 0.8rem;
+    }
+
+    /* Password Strength */
+    .veri-password-strength {
+        margin-top: 15px;
+    }
+
+    .veri-strength-meter {
+        height: 6px;
+        background: #e2e8f0;
+        border-radius: 3px;
+        overflow: hidden;
+        margin-bottom: 8px;
+    }
+
+    .veri-strength-bar {
+        height: 100%;
+        width: 0%;
+        background: #ef4444;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .veri-strength-text {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        color: #64748b;
+    }
+
+    .veri-strength-label {
+        font-weight: 600;
+    }
+
+    /* Password Requirements */
+    .veri-password-requirements {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 15px;
+        border: 1px solid #e2e8f0;
+    }
+
+    .veri-password-requirements h4 {
+        font-size: 0.95rem;
+        color: #334155;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .veri-password-requirements ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 8px;
+    }
+
+    .veri-requirement {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.85rem;
+        color: #64748b;
+    }
+
+    .veri-requirement i {
+        font-size: 0.5rem;
+        color: #cbd5e1;
+    }
+
+    .veri-requirement.met i {
+        color: #10b981;
+    }
+
+    /* Terms & Conditions */
+    .veri-terms-section {
+        margin: 10px 0;
+    }
+
+    .veri-checkbox-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .veri-checkbox {
+        position: relative;
+        top: 3px;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        border: 2px solid #cbd5e1;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .veri-checkbox::after {
+        content: '\f00c';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        color: white;
+        font-size: 0.8rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    #termsCheckbox:checked + .veri-checkbox {
+        background: #6366f1;
+        border-color: #6366f1;
+    }
+
+    #termsCheckbox:checked + .veri-checkbox::after {
+        opacity: 1;
+    }
+
+    #termsCheckbox {
+        display: none;
+    }
+
+    .veri-checkbox-label {
+        font-size: 0.9rem;
+        color: #475569;
+        line-height: 1.5;
+    }
+
+    .veri-terms-link {
+        color: #6366f1;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .veri-terms-link:hover {
+        color: #4f46e5;
+        text-decoration: underline;
+    }
+
+    /* Submit Button */
+    .veri-submit-button {
+        background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+        color: white;
+        border: none;
+        padding: 18px 32px;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .veri-submit-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    }
+
+    .veri-submit-button:active {
+        transform: translateY(0);
+    }
+
+    /* Divider */
+    .veri-divider {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        color: #94a3b8;
+        font-size: 0.9rem;
+    }
+
+    .veri-divider::before,
+    .veri-divider::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: #e2e8f0;
+    }
+
+    .veri-divider span {
+        padding: 0 16px;
+    }
+
+    /* Social Login */
+    .veri-social-login {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .veri-social-btn {
+        padding: 14px;
+        border: 2px solid #e2e8f0;
+        background: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #475569;
+    }
+
+    .veri-social-btn:hover {
+        border-color: #6366f1;
+        transform: translateY(-2px);
+    }
+
+    .veri-social-btn i {
+        font-size: 1.2rem;
+    }
+
+    .veri-google:hover i {
+        color: #DB4437;
+    }
+
+    .veri-microsoft:hover i {
+        color: #00A4EF;
+    }
+
+    .veri-github:hover i {
+        color: #333;
+    }
+
+    /* Login Link */
+    .veri-login-link {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #475569;
+        margin-top: 20px;
+    }
+
+    .veri-login-redirect {
+        color: #6366f1;
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 5px;
+        transition: color 0.3s ease;
+    }
+
+    .veri-login-redirect:hover {
+        color: #4f46e5;
+        text-decoration: underline;
+    }
+
+    /* Right Column - Benefits */
+    .veri-registration-benefits {
+        flex: 1;
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        color: white;
+        padding: 60px 40px;
+        display: flex;
+        align-items: center;
+        animation: slideInRight 0.6s ease-out;
+    }
+
+    .veri-benefits-container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .veri-benefits-header {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .veri-benefits-header h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .veri-benefits-header p {
+        color: #cbd5e1;
+        font-size: 1rem;
+    }
+
+    /* Benefits List */
+    .veri-benefits-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .veri-benefit-item {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .veri-benefit-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(99, 102, 241, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    .veri-benefit-icon i {
+        color: #6366f1;
+        font-size: 1.3rem;
+    }
+
+    .veri-benefit-content h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: white;
+    }
+
+    .veri-benefit-content p {
+        color: #94a3b8;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* Testimonial */
+    .veri-testimonial {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 30px;
+        margin-bottom: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .veri-testimonial-content {
+        position: relative;
+        margin-bottom: 25px;
+    }
+
+    .veri-testimonial-content i:first-child {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        font-size: 1.5rem;
+        color: rgba(99, 102, 241, 0.3);
+    }
+
+    .veri-testimonial-content p {
+        font-style: italic;
+        line-height: 1.7;
+        color: #e2e8f0;
+        font-size: 1rem;
+    }
+
+    .veri-testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .veri-avatar-circle {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .veri-author-info h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: white;
+    }
+
+    .veri-author-info p {
+        font-size: 0.85rem;
+        color: #94a3b8;
+    }
+
+    /* Security Badges */
+    .veri-security-badges {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .veri-security-badge {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 10px 16px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8rem;
+        color: #cbd5e1;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .veri-security-badge i {
+        color: #6366f1;
+        font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .veri-registration-page {
+            flex-direction: column;
+        }
+        
+        .veri-registration-benefits {
+            display: none;
+        }
+        
+        .veri-registration-container {
+            padding: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .veri-registration-card {
+            padding: 30px 20px;
+            border-radius: 20px;
+        }
+        
+        .veri-registration-title {
+            font-size: 1.8rem;
+        }
+        
+        .veri-social-login {
+            grid-template-columns: 1fr;
+        }
+        
+        .veri-social-btn {
+            justify-content: center;
+            flex-direction: row;
+            padding: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .veri-icon-circle {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+        
+        .veri-form-input {
+            padding: 14px 16px 14px 44px;
+        }
+        
+        .veri-submit-button {
+            padding: 16px 24px;
+        }
+    }
+</style>
+
+<script>
+    // Password strength checker
+    document.getElementById('passwordInput').addEventListener('input', function(e) {
+        const password = e.target.value;
+        const strengthBar = document.getElementById('strengthBar');
+        const strengthLabel = document.getElementById('strengthLabel');
+        const requirements = document.querySelectorAll('.veri-requirement');
+        
+        // Check requirements
+        const checks = {
+            length: password.length >= 8,
+            uppercase: /[A-Z]/.test(password),
+            number: /[0-9]/.test(password),
+            special: /[^A-Za-z0-9]/.test(password)
+        };
+        
+        // Update requirement indicators
+        requirements.forEach(req => {
+            const type = req.dataset.requirement;
+            const icon = req.querySelector('i');
+            if (checks[type]) {
+                req.classList.add('met');
+                icon.style.color = '#10b981';
+            } else {
+                req.classList.remove('met');
+                icon.style.color = '#cbd5e1';
+            }
+        });
+        
+        // Calculate strength score
+        let strength = 0;
+        if (checks.length) strength += 25;
+        if (checks.uppercase) strength += 25;
+        if (checks.number) strength += 25;
+        if (checks.special) strength += 25;
+        
+        // Update strength bar
+        strengthBar.style.width = strength + '%';
+        
+        // Update strength label
+        if (strength < 40) {
+            strengthBar.style.background = '#ef4444';
+            strengthLabel.textContent = 'Weak';
+            strengthLabel.style.color = '#ef4444';
+        } else if (strength < 70) {
+            strengthBar.style.background = '#f59e0b';
+            strengthLabel.textContent = 'Fair';
+            strengthLabel.style.color = '#f59e0b';
+        } else if (strength < 90) {
+            strengthBar.style.background = '#3b82f6';
+            strengthLabel.textContent = 'Good';
+            strengthLabel.style.color = '#3b82f6';
+        } else {
+            strengthBar.style.background = '#10b981';
+            strengthLabel.textContent = 'Strong';
+            strengthLabel.style.color = '#10b981';
+        }
+    });
+    
+    // Password visibility toggle
+    document.querySelector('.veri-password-toggle').addEventListener('click', function() {
+        const passwordInput = document.getElementById('passwordInput');
+        const icon = this.querySelector('i');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    });
+    
+    // Form input validation
+    document.querySelectorAll('.veri-form-input').forEach(input => {
+        input.addEventListener('blur', function() {
+            const icon = this.parentNode.querySelector('.veri-input-icon');
+            if (this.value.trim() !== '' && this.checkValidity()) {
+                icon.style.color = '#10b981';
+            } else if (this.value.trim() === '') {
+                icon.style.color = '#94a3b8';
+            } else {
+                icon.style.color = '#ef4444';
+            }
+        });
+        
+        input.addEventListener('input', function() {
+            const icon = this.parentNode.querySelector('.veri-input-icon');
+            icon.style.color = '#94a3b8';
+        });
+    });
+    
+    // Form submission
+    document.querySelector('.veri-registration-form').addEventListener('submit', function(e) {
+        const termsCheckbox = document.getElementById('termsCheckbox');
+        if (!termsCheckbox.checked) {
+            e.preventDefault();
+            alert('Please agree to the Terms of Service and Privacy Policy');
+            return false;
+        }
+        
+        // Check password strength
+        const password = document.getElementById('passwordInput').value;
+        const strengthLabel = document.getElementById('strengthLabel').textContent;
+        
+        if (strengthLabel === 'Weak') {
+            const confirmWeak = confirm('Your password strength is weak. Are you sure you want to continue?');
+            if (!confirmWeak) {
+                e.preventDefault();
+                return false;
+            }
+        }
+        
+        // Add loading state to submit button
+        const submitBtn = document.querySelector('.veri-submit-button');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Creating Account...</span>';
+        submitBtn.disabled = true;
+        
+        // Revert after 3 seconds (simulate submission)
+        setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 3000);
+    });
+</script>
+{% endblock %}
